@@ -1,282 +1,192 @@
 <!doctype html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<meta name="robots" content="index,follow">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,width=device-width,minimal-ui">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<meta name="HandheldFriendly" content="true">
-		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-
-        		<meta property="og:url" 		content="https://play.famobi.com/element-blocks/A-3YI6O">
-		<meta property="og:type"		content="website">
-		<meta property="og:title"		content="Element Blocks">
-		<meta property="og:description"	content="Play Element Blocks">
-		<meta property="og:image" 		content="https://img.cdn.famobi.com/portal/html5games/images/tmp/ElementBlocksTeaser.jpg">
-		
-		<title>Element Blocks</title>
-		<style>
-		html, body {
-			background: #000;
-			color: #ff7;
-			font: 14px/1.2 Arial, "Helvetica Neue", sans-serif;
-			height: 100%;
-		}
-
-		.fg-preroll-trigger {
-			cursor: pointer;
-		}
-		</style>
-		<link rel="stylesheet" type="text/css" href="/assets/0.2-ac565862/css/play.css">
-				<link rel="canonical" href="https://play.famobi.com/element-blocks">
-				<script src="/assets/0.2-ac565862/js/helper.js"></script>
-		<script>
-			famobi_dataLayer = window.famobi_dataLayer || window.dataLayer || [];
-		</script>
-	</head>
 	<body>
-		<article itemscope itemtype="http://schema.org/CreativeWork">
-	<meta itemprop="name" content="Element Blocks">
-	<meta itemprop="headline" content="Play &ldquo;Element Blocks&rdquo; HTML5 Game directly in your browser">
-	<meta itemprop="image" content="https://img.cdn.famobi.com/portal/html5games/images/tmp/ElementBlocksTeaser.jpg">
-	<meta itemprop="thumbnailUrl" content="https://img.cdn.famobi.com/portal/html5games/images/tmp/96/ElementBlocksTeaser.jpg">
-</article>
-<script>
-(function(){
-	var body = document.getElementsByTagName('body')[0],
-		gameId = "8c70b6c7-5792-4c40-b891-496eef2fb5ed",
-		affiliateId = "A-3YI6O",
-		portalId = "88820ff9-fa83-4360-ba37-3bcbe0559f9d",
-		packageId = "element-blocks",
-		redirectUrl = "https://games.cdn.famobi.com/html5games/e/element-blocks/v290/?fg_domain=play.famobi.com&fg_aid=A-3YI6O&fg_uid=8c70b6c7-5792-4c40-b891-496eef2fb5ed&fg_pid=88820ff9-fa83-4360-ba37-3bcbe0559f9d&fg_beat=720",
-		isAffiliateUrl = "0",
-		gameTeaser = "https://img.cdn.famobi.com/portal/html5games/images/tmp/ElementBlocksTeaser.jpg",
-		gameHeader = "https://img.cdn.famobi.com/portal/html5games/images/tmp/ElementBlocksHeader.jpg",
-		gameTitle = "Element Blocks",
-		portalParams = {"ad_ingame":true,"domains":{"primary":"www.gameslol.net"},"more_games_url":"https:\/\/www.gameslol.net","cms":{"active":false,"categories":[{"id":"skill","name":"Skill"},{"id":"quiz","name":"Quiz"},{"id":"match-3","name":"Match 3"},{"id":"girls","name":"Girls"},{"id":"racing","name":"Racing"},{"id":"cars","name":"Cars"},{"id":"jump-and-run","name":"Jump & Run"},{"id":"puzzle","name":"Puzzle"},{"id":"sports","name":"Sports"},{"id":"action","name":"Action"},{"id":"arcade","name":"Arcade"},{"id":"cooking","name":"Cooking"},{"id":"bubble-shooter","name":"Bubble Shooter"},{"id":"cards","name":"Card"}],"identifier":"wwwgameslolnet"},"more_games_image":"\/portal\/88820ff9-fa83-4360-ba37-3bcbe0559f9d\/more-games-button\/600x253\/60ec26fea15c7.png","cache-buster":"60ec27034f476","logo":"\/portal\/88820ff9-fa83-4360-ba37-3bcbe0559f9d\/icon\/260x60\/60ec26fea13e8.png","dfp_available":true},
-		adProvider = "dfp",
-		preventIFrame = "0",
-		redirectTimer = null,
-		isInsideFrame = (function() {
-			try {
-				return window.top !== window.self;
-			} catch(e) {
-				return true;
-			}
-		})(),
-		showWebmasterNotification = false,
-		isRestricted = "",
-		redirectToBlank = isInsideFrame && adProvider === "dfp" && portalParams.ad_ingame && !portalParams.dfp_available,
-		getUrlParams = function(a, b, c) {
-			a = /[?&]?([^=]+)=([^&]*)/g, b = document.location && document.location.search ? document.location.search.split("+").join(" ") : "";
-			for (var d = {}; c = a.exec(b);) d[decodeURIComponent(c[1])] = decodeURIComponent(c[2]);
-			return d;
-		},
-		getGameLink = function() {
-			return 'https://play.famobi.com/' + packageId + '/' + affiliateId;
-		},
-		getLinkToGame = function() {
-			var originalRef = '';
-			var params = getUrlParams();
-			if (params.original_ref) {
-				originalRef = params.original_ref;
-			} else {
-				originalRef = document.referrer;
-			}
-			
-			var originalRefParam = '';
-			if (originalRef.indexOf('&original_ref') > -1) {
-				// preserve original_ref param while preventing endless appending when gameapi redirects to a fresh beat
-				originalRefParam = originalRef.substr(originalRef.indexOf('&original_ref') + 1);
-				if (originalRefParam.indexOf('&') > -1)
-					originalRefParam = originalRefParam.substr(0, originalRefParam.indexOf('&'))
-			} else {
-				originalRefParam = 'original_ref=' + encodeURIComponent(originalRef);
-			}
-			redirectUrl = redirectUrl + (redirectUrl.indexOf('?') > -1 ? '&' : '?') + originalRefParam;
-			return redirectUrl + (document.location.hash ? document.location.hash : '');
-		},
-		getHTML = function () {
-			var game = {},
-				type = '',
-				linksLiNode = null,
-				linksANode = null,
-				linkClassName = '',
-				linkText = '';
+		let ecran = {width:1280,height:720};
+let diff = 10;
+let snakes=[],fruits=[];
+let scoreDiv;
+let createFruit = function(iOptions){
+ this.draw = function(){
+  stroke(this.couleur.rouge,this.couleur.vert,this.couleur.bleu);
+  point(this.position.x, this.position.y);
+ };
+ this.updatePosition = function(iPosition){
+  if(iPosition === undefined)
+      iPosition = {x:floor(random(10, (ecran.width - 10) / 10))*10,y:floor(random(10, (ecran.height - 10) / 10)) * 10}   
+     this.position = iPosition;
+ };
+ this.updatePosition(iOptions.position);
+ this.couleur = iOptions.couleur; 
+ return this;
+};
 
-			var bodyNode = document.getElementsByTagName('body')[0];
-			bodyNode.style.margin = 0;
+let createSnake = function(iOptions){
+ this.control = function(keyCode){
+   switch (keyCode) {
+  case iOptions.controler.left:
+    if (this.direction !== 'right') {
+   this.direction = 'left';
+    }
+    break;
+  case iOptions.controler.right:
+    if (this.direction !== 'left') {
+   this.direction = 'right';
+    }
+    break;
+  case iOptions.controler.up:
+    if (this.direction !== 'down') {
+   this.direction = 'up';
+    }
+    break;
+  case iOptions.controler.down:
+    if (this.direction !== 'up') {
+   this.direction = 'down';
+    }
+    break;
+   }  
+ };
+ this.draw = function(){
+  stroke(this.couleur.rouge,this.couleur.vert,this.couleur.bleu);
+  let numSegments=this.positionSnake.length;
+  for (let i = 0; i <  numSegments - 1; i++) {
+   this.positionSnake[i].x = this.positionSnake[i + 1].x;  
+   this.positionSnake[i].y = this.positionSnake[i + 1].y; 
+  }   
+  var tete = this.tete();
+  switch (this.direction) {
+   case 'right':
+    tete.x = this.positionSnake[numSegments - 2].x + diff;
+    tete.y = this.positionSnake[numSegments - 2].y;
+    break;
+   case 'up':
+    tete.x = this.positionSnake[numSegments - 2].x;
+    tete.y = this.positionSnake[numSegments - 2].y - diff;
+    break;
+   case 'left':
+    tete.x = this.positionSnake[numSegments - 2].x - diff;
+    tete.y = this.positionSnake[numSegments - 2].y;
+    break;
+   case 'down':
+    tete.x = this.positionSnake[numSegments - 2].x;
+    tete.y = this.positionSnake[numSegments - 2].y + diff;
+    break;
+  }  
+  for (let i = 0; i < this.positionSnake.length - 1; i++) {
+   let positionCourante = this.positionSnake[i],
+    positionSuivante = this.positionSnake[i + 1]; 
+   line(positionCourante.x, positionCourante.y, positionSuivante.x, positionSuivante.y);
+  }
+ };
+ this.tete=function(){
+  return this.positionSnake[this.positionSnake.length-1];
+ };
+ this.update = function(iFruit,snakes){
+  let checkSnakeCollision=false,
+   teteSnake = this.tete();
 
-			var fgAppsNode = document.createElement('div');
-			fgAppsNode.id = 'fg-apps';
+    if(teteSnake.x > ecran.width || teteSnake.x < 0 || teteSnake.y > ecran.height || teteSnake.y < 0) 
+   checkSnakeCollision=true;
+  else {
+   for (let i = 0; i < this.positionSnake.length - 1; i++) {
+    if (this.positionSnake[i].x === teteSnake.x && this.positionSnake[i].y === teteSnake.y) {
+     checkSnakeCollision=true;
+    }
+   }
+  }
+  snakes.forEach(function(unSnake){
+   if(unSnake!==this){
+    for (let i = 0; i < unSnake.positionSnake.length; i++) {
+     if (unSnake.positionSnake[i].x === teteSnake.x && unSnake.positionSnake[i].y === teteSnake.y) {
+      checkSnakeCollision=true;
+     }
+    } 
+   }
+  },this);
+    if(checkSnakeCollision) {
+   noLoop();
+   scoreDiv.html(scoreDiv.html()+'<br> '+this.name+' a perdu');
+  }  
 
-			var gameHeaderNode = document.createElement('div');
-			gameHeaderNode.className = 'background';
-			gameHeaderNode.style.backgroundImage = 'url(' + gameHeader + ')';
-			fgAppsNode.appendChild(gameHeaderNode);
+  if (teteSnake.x === iFruit.position.x && teteSnake.y === iFruit.position.y) {
+   this.score++;
+   this.positionSnake.unshift({x:this.positionSnake[0].x,y:this.positionSnake[0].y});
+   iFruit.updatePosition();
+  } 
+ };
+ let numSegments = iOptions.taille || 5;
+ this.positionSnake=[]
+ this.couleur=iOptions.couleur;
+ this.score=0;
+ for (let i = 0; i < numSegments; i++) {
+  this.positionSnake.push({x:iOptions.x + i * diff,
+        y:iOptions.y});
+ }
+ this.direction = 'right'
+ this.name=iOptions.name;
+ return this;
+}
 
-			var articleNode = document.createElement('article');
-			var h1Node = document.createElement('h1');
-			var titleNode = document.createElement('span');
-			titleNode.innerHTML = gameTitle;
+function setup() {
+  scoreDiv = createDiv('');
+  scoreDiv.position(20, 20);
+  scoreDiv.id = 'score';
+  scoreDiv.style('color', 'yellow');
 
-			var gameTeaserNode = document.createElement('img');
-			gameTeaserNode.src = gameTeaser;
-			gameTeaserNode.alt = '';
+  createCanvas(ecran.width, ecran.height);
+  frameRate(15);
+  strokeWeight(10);
+  snakes.push(new createSnake({x:0,y:100,
+ couleur:{rouge:random(30, 255),
+ vert:random(30, 255),
+ bleu:random(30, 255)
+  },controler:{left:37,
+right:39,
+up:38,
+down:40},name:'joueur '+(snakes.length+1)}));
+  snakes.push(new createSnake({x:0,y:400,
+ couleur:{rouge:random(30, 255),
+ vert:random(30, 255),
+ bleu:random(30, 255)
+  },controler:{left:81,
+right:68,
+up:90,
+down:83},name:'joueur '+(snakes.length+1)}));
+  fruits.push(new createFruit({
+ couleur:{rouge:random(30, 255),
+ vert:random(30, 255),
+ bleu:random(30, 255)
+  }
+  }));
+  fruits.push(new createFruit({
+ couleur:{rouge:random(30, 255),
+ vert:random(30, 255),
+ bleu:random(30, 255)
+  }
+  })); 
+}
 
-			h1Node.appendChild(gameTeaserNode);
-			h1Node.appendChild(titleNode);
+function draw() {
+ var joueur = 1, html = ''
+ background(0);
+ snakes.forEach(function(snake){
+  html += snake.name + ' : ' + snake.score+'<br>';
+  snake.draw();
+ });
+ scoreDiv.html(html);
+ 
+ fruits.forEach(function(fruit){
+  fruit.draw();
+  snakes.forEach(function(snake){
+   snake.update(fruit,snakes);
+  });
+ });  
+}
 
-			target = redirectToBlank ? '_blank' : '_self';
-
-			buttonContainerNode = document.createElement('div');
-			buttonContainerNode.className = 'buttonContainer';
-
-			buttonNode = document.createElement('a');
-			buttonNode.className = 'cta';
-			var cancelRedirectTimeout = function () {
-				clearTimeout(redirectTimer);
-			}
-			// do both, doesn't harm
-			buttonNode.addEventListener('touchend', cancelRedirectTimeout);
-			buttonNode.addEventListener('click', cancelRedirectTimeout);
-
-			buttonNode.setAttribute('href', getGameLink());
-			buttonNode.setAttribute('target', target);
-			buttonNode.innerHTML = 'Play';
-			buttonContainerNode.appendChild(buttonNode);
-
-			articleNode.appendChild(h1Node);
-			articleNode.appendChild(buttonContainerNode);
-
-			if (showWebmasterNotification) {
-				infoNode = document.createElement('p');
-				infoNode.className = 'info';
-				infoNode.innerHTML = '<strong>@Webmasters:</strong> Please see the <a href="https://help.famobi.com/#use-games-in-an-iframe" target="_blank">Help section (&quot;I would like to use games in an iFrame - &hellip;&quot;).</a>';
-				articleNode.appendChild(infoNode);
-
-				if (affiliateId !== "A1000-1") {
-					infoNode = document.createElement('p');
-					infoNode.className = 'info';
-					infoNode.innerHTML = 'Please make sure that our information is present in your <span style="font-weight: bold">/ads.txt</span> file, <a href="https://help.famobi.com/#\'ads.txt\'-What-is-it-and-why-do-i-need-it?" target="_blank">see more details in this help section (&quot;\'ads.txt\' What is it and why do i need it?&quot;).</a> You will be forwarded in a few seconds&hellip;';
-					articleNode.appendChild(infoNode);
-				}
-			}
-
-			fgAppsNode.appendChild(articleNode);
-			bodyNode.appendChild(fgAppsNode);
-		}
-	;
-
-	// Use dataLayer variables
-	famobi_dataLayer.push({
-		'packageId': packageId,
-		'affiliateId': affiliateId,
-		'section': 'pregame'
-	});
-
-
-
-	function initRedirect(url) {
-
-		// @TODO  make a business case with google for adx for games inside webview
-		if (["A-TDOHN", "A-DOT38"].indexOf(affiliateId) > -1) {
-			// CTR policy violation
-			redirectToBlank = true;
-			showWebmasterNotification = true;
-			affiliateId = "A1000-11";
-		}
-
-		if (document.referrer.indexOf("game01.ru") !== -1) {
-			// Violating content
-			redirectToBlank = true;
-			showWebmasterNotification = true;
-			affiliateId = "A1000-11";
-		}
-
-		if (isInsideFrame && JSON.parse(preventIFrame)) {
-			redirectToBlank = true;
-		}
-
-		// redirect poki/gamesys traffic to default affiliate (until case solved)
-		if (["A-GAMESYS"].indexOf(affiliateId) > -1) {
-			affiliateId = "A1000-11";
-			window.location.replace(getGameLink());
-			return;
-		}
-
-		// redirect part of traffic to afg beta versions
-		if ((["solitaire-classic", "table-tennis-world-tour", "perfect-piano"].indexOf(packageId) > -1)
-				&& (["A-AFGBETA",
-					"A-DENDAAPP",
-					"A-TOS21",
-					"A-GAME8-AFG",
-					"A-HUAWEIAPP",
-					"A-HUAWEI-QUICKAPPS",
-					"A-HUAWEI-BROWSER",
-					"A-HUAWEI-QUICKAPP-OMNOM",
-					"A-HUAWEI-BROWSER-OMNOM",
-					"A-GOLLERCEPTE",
-					"A-SPORX",
-					"A-KBCBANK",
-					"A-MINESKIGAMES",
-					"A-MINESKIGAMES-DEV",
-					"A-CK67R",
-					"A-TIKTOK"].indexOf(affiliateId) < 0)
-				&& !JSON.parse(isAffiliateUrl)
-		        && portalParams.ad_ingame
-		        && Math.random() < 0.2) {		
-			var urlParams = '?original_aid=' + encodeURIComponent(affiliateId);
-			affiliateId = "A-AFGBETA";
-			window.location.replace(getGameLink() + urlParams);
-			return;
-		}
-
-		if (redirectToBlank) {
-			if (affiliateId === "A1000-1" && !JSON.parse(preventIFrame)) {
-				affiliateId = "A1000-11";
-			}
-			getHTML();
-			redirectTimer = setTimeout(function() {
-				window.top.location = getGameLink();
-			}, 15E3);
-		} else {
-			incrHit(function(){
-				window.location.replace(url);
-			});
-		}
-	}
-
-	function incrHit(callback) {
-		var newImg = document.createElement('img');
-		newImg.src = '/play/hit/' + gameId + '/' + affiliateId;
-		newImg.setAttribute('width', "1");
-		newImg.setAttribute('height', "1");
-
-		function trackWithGoogleAndContinue() {
-			setTimeout(callback, 250);
-		}
-
-		if (typeof callback == "function"){
-			newImg.onload = trackWithGoogleAndContinue;
-			newImg.onerror = trackWithGoogleAndContinue;
-		}
-		body.appendChild(newImg);
-	}
-
-	initRedirect(getLinkToGame());
-})();
-</script>
-<noscript>
-	<h2>Redirecting to &ldquo;Element Blocks&rdquo;&hellip;</h2>
-	<p>
-		<a href="https://games.cdn.famobi.com/html5games/e/element-blocks/v290/?fg_domain=play.famobi.com&fg_aid=A-3YI6O&fg_uid=8c70b6c7-5792-4c40-b891-496eef2fb5ed&fg_pid=88820ff9-fa83-4360-ba37-3bcbe0559f9d&fg_beat=720" style="color:#fff">Play this HTML5 Game</a>
-		<a href="https://famobi.com/privacy" style="color:#fff">About Privacy at Famobi</a>
-	</p>
-</noscript>
-
+function keyPressed() {
+ snakes.forEach(function(snake){
+  snake.control(keyCode);
+ });
+}
 	</body>
 </html>
